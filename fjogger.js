@@ -21,7 +21,7 @@ export function formatEntry(level, msg, date) {
 }
 
 function openFile() {
-  return fs.openSync('logging/logs/log.txt', 'a');
+  return fs.openSync(__dirname + 'logging/logs/log.txt', 'a');
 }
 
 function writeToFile(file, message) {
