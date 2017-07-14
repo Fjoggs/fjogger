@@ -1,9 +1,9 @@
 {
-  "name": "flog",
+  "name": "fjogger",
   "version": "1.0.0",
   "description": "Barebones 'log-to-file' package for Javascript",
-  "main": "flog.js",
-  "repository": "https://github.com/Fjoggs/flog",
+  "main": "fjogger.js",
+  "repository": "https://github.com/Fjoggs/fjogger",
   "author": "Vegard Fjogstad <fjoggis@gmail.com>",
   "license": "MIT",
   "scripts": {

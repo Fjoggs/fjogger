@@ -1,4 +1,4 @@
-import { formatDate, formatEntry } from '../flog';
+import { formatDate, formatEntry } from '../fjogger';
 import os from 'os';
 
 describe('flog', () => {

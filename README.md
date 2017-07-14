@@ -1,4 +1,4 @@
-# flog
+# fjogger
 Barebones 'log-to-file' package for Javascript
 
 ## Frameworks used
