@@ -4,7 +4,7 @@
   "description": "Barebones 'log-to-file' package for Javascript",
   "main": "flog.js",
   "repository": "https://github.com/Fjoggs/flog",
-  "author": "fjoggis@gmail.com",
+  "author": "Vegard Fjogstad <fjoggis@gmail.com>",
   "license": "MIT",
   "scripts": {
     "fix": "eslint --fix .",
