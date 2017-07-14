@@ -1,0 +1,26 @@
+{
+  "name": "flog",
+  "version": "1.0.0",
+  "description": "Barebones 'log-to-file' package for Javascript",
+  "main": "flog.js",
+  "repository": "https://github.com/Fjoggs/flog",
+  "author": "fjoggis@gmail.com",
+  "license": "MIT",
+    "scripts": {
+    "fix": "eslint --fix .",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",    
+    "babel-cli": "^6.24.1",
+    "eslint": "^4.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "prettier": "^1.5.2",
+    "prettier-eslint": "^6.4.2"
+  },
+  "jest": {
+    "testRegex": "./test/.*.js$"
+  }
+}
