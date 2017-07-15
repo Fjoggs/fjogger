@@ -2,7 +2,7 @@
   "name": "fjogger",
   "version": "1.1.0",
   "description": "Barebones 'log-to-file' package for Javascript",
-  "main": "src/fjogger.js",
+  "main": "lib/fjogger.js",
   "repository": "https://github.com/Fjoggs/fjogger",
   "author": "Vegard Fjogstad <fjoggis@gmail.com>",
   "license": "MIT",
