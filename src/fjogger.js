@@ -23,9 +23,14 @@ export function formatEntry(level, msg, date) {
 }
 
 function openFile() {
-  asyncExists('logs', 484, error => {
-    if (error) console.log('something went wrong creating directory: ', error);
-  });
+  // asyncExists('logs', 484, error => {
+  //   if (error) console.log('something went wrong creating directory: ', error);
+  // });
+  try {
+    fs.mkdirSync('logs');
+  } catch (error) {
+    // directory already exists
+  }
   return fs.openSync('logs/log.txt', 'a');
 }
 
