@@ -1,6 +1,6 @@
 {
   "name": "fjogger",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Barebones 'log-to-file' package for Javascript",
   "main": "lib/fjogger.js",
   "repository": "https://github.com/Fjoggs/fjogger",
