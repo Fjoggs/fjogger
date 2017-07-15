@@ -1,5 +1,16 @@
 # fjogger
+Current build has a bug, working on fixing it
 Barebones 'log-to-file' package for Javascript
+
+## Usage
+
+```js
+import log from 'fjogger'
+
+log('error', 'something went wrong');
+```
+
+logs to `'__dirname'/logging/logs/log.txt`
 
 ## Frameworks used
 - Ecmascript 6
