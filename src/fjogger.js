@@ -23,14 +23,14 @@ export function formatEntry(level, msg, date) {
 }
 
 function openFile() {
-  // asyncExists('logs', 484, error => {
-  //   if (error) console.log('something went wrong creating directory: ', error);
-  // });
   try {
     fs.mkdirSync('logs');
   } catch (error) {
     // directory already exists
   }
+  const file = asyncExists('logs/log.txt', 484, error => {
+    if (error) console.log('something went wrong creating directory: ', error);
+  });
   return fs.openSync('logs/log.txt', 'a');
 }
 
@@ -47,12 +47,12 @@ function writeToFile(file, message) {
 }
 
 // method courtesy of https://stackoverflow.com/questions/21194934/node-how-to-create-a-directory-if-doesnt-exist
-function asyncExists(path, mask, callBack) {
+function asyncExists(file, mask, callBack) {
   if (typeof mask === 'function') {
     callBack = mask;
     mask = 484;
   }
-  fs.mkdir(path, mask, error => {
+  fs.open(file, mask, error => {
     if (error) {
       if (error.code === 'EEXIST') callBack(null);
       else callBack(error);
