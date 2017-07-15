@@ -10,7 +10,7 @@ import log from 'fjogger'
 log('error', 'something went wrong');
 ```
 
-logs to `'__dirname'/logging/logs/log.txt`
+logs to `'__dirname'/logs/log.txt`
 
 ## Frameworks used
 - Ecmascript 6
