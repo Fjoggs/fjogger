@@ -25,7 +25,6 @@ export function formatEntry(level, msg, date) {
 function openFile() {
   asyncExists('logs', 484, error => {
     if (error) console.log('something went wrong creating directory: ', error);
-    else console.log('succesfully created folder');
   });
   return fs.openSync('logs/log.txt', 'a');
 }
@@ -34,7 +33,7 @@ function writeToFile(file, message) {
   fs.write(file, message, (error, success) => {
     if (error) {
       console.log(
-        'Something went wront writing to file with message: ',
+        'Something went wrong writing to file with message: ',
         file,
         message
       );
