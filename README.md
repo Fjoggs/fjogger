@@ -1,5 +1,4 @@
 # fjogger
-Current build has a bug, working on fixing it
 Barebones 'log-to-file' package for Javascript
 
 ## Usage
@@ -10,7 +9,7 @@ import log from 'fjogger'
 log('error', 'something went wrong');
 ```
 
-logs to `'__dirname'/logs/log.txt`
+logs to `/logs/log.txt`
 
 ## Frameworks used
 - Ecmascript 6
