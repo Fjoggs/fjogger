@@ -2,6 +2,7 @@
 /.circleci/
 /src/
 /test/
+/logs/
 .eslintrc.json
 yarn.lock
 .babelrc

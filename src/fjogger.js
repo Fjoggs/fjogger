@@ -4,6 +4,8 @@ import os from 'os';
 export default function log(level, msg) {
   const file = openFile();
   const formattedDate = formatDate(new Date());
+  const formattedEntry = formatEntry(level, msg, formattedDate);
+  writeToFile(file, formattedEntry);
 }
 
 export function formatDate(date) {
@@ -21,9 +23,37 @@ export function formatEntry(level, msg, date) {
 }
 
 function openFile() {
+  asyncExists('logs', 484, error => {
+    if (error) console.log('something went wrong creating directory: ', error);
+    else console.log('succesfully created folder');
+  });
   return fs.openSync('logs/log.txt', 'a');
 }
 
 function writeToFile(file, message) {
-  fs.writeSync(file, message);
+  fs.write(file, message, (error, success) => {
+    if (error) {
+      console.log(
+        'Something went wront writing to file with message: ',
+        file,
+        message
+      );
+    }
+  });
+}
+
+// method courtesy of https://stackoverflow.com/questions/21194934/node-how-to-create-a-directory-if-doesnt-exist
+function asyncExists(path, mask, callBack) {
+  if (typeof mask === 'function') {
+    callBack = mask;
+    mask = 484;
+  }
+  fs.mkdir(path, mask, error => {
+    if (error) {
+      if (error.code === 'EEXIST') callBack(null);
+      else callBack(error);
+    } else {
+      callBack(null);
+    }
+  });
 }

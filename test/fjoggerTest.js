@@ -1,4 +1,4 @@
-import { formatDate, formatEntry } from '../src/fjogger';
+import log, { formatDate, formatEntry } from '../src/fjogger';
 import os from 'os';
 
 describe('flog', () => {
@@ -29,5 +29,9 @@ describe('flog', () => {
     const actual = formatEntry('info', 'test entry', formattedDate);
     const expected = `[1999-12-31] 23:59:59 [INFO] test entry${os.EOL}`;
     expect(actual).toEqual(expected);
+  });
+
+  it('should add log entry to logs/log.txt', () => {
+    log('info', 'test entry');
   });
 });
